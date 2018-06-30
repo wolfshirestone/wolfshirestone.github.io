@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<font face="times new roman, helvetica" color="black" font size="7">N.C.'s</font>
+<p><em>LINKed page</em></p>
+  <br>
+  <br>
+  <style>
+div {
+    
+    margin-top: 100px;
+    margin-left: 80px;
+}
+body {
+    font: normal 14px Times New Roman, Helvetica;
+}
+</style>
+
+<body>
+
+
+<div>
+	Hello
+	<br>
+<img src="https://raw.githubusercontent.com/wolfshirestone/wolfshirestone.github.io/master/image/IMG_7854.PNG" width="200" />
+
+</div>
+
+
+
+
+</body
+</html>
