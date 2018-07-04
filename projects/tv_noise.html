@@ -1,70 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>TV Noise</title>
-	<link rel="stylesheet" href="tv_noise.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>TV Noise</title>
+     <link rel="stylesheet" href="projects/tv_noise .css">
 </head>
 <body>
-	
-	<canvas id="canvas"></canvas>
-	<script type="text/javascript">
 
-	var canvas = document.getElementById('canvas')
-	ctx = canavs.getContext('2d')
+     <canvas id="canvas"></canvas>
 
-	function resize(){
-		canvas.width = window.innerWidth;
-		canavs.height = window.innerHeight;
+     <script type="text/javascript">
 
-	}
-	resize();
-	window.onresize = resize;
+     var canvas = document.getElementById('canvas'),
+     ctx = canvas.getContext('2d');
 
-	funtion noise(ctx) {
+     function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+     }
+     resize();
+     window.onresize = resize;
 
-	var w = ctx.canvas.width,
-	h = ctx.canvas.height,
-	idata = ctx.createImageData(w,h),
-	buffer32 = new Uint32Array(idata.data.buffer),
-	len = buffer32.length,
-	i = 0;
+     function noise(ctx) {
 
-	for(; i < len;)
-		buffer32[i++] = ((255 * Math.random()) |0) << 24;
+     var w = ctx.canvas.width,
+     h = ctx.canvas.height,
+     idata = ctx.createImageData(w, h),
+     buffer32 = new Uint32Array(idata.data.buffer),
+     len = buffer32.length,
+     i = 0;
 
-	ctx.putImageData(idata, 0, 0);
+     for(; i < len;)
+     buffer32[i++] = ((255 * Math.random())|0) << 24;
 
-	}
+     ctx.putImageData(idata, 0, 0);
 
-	var toggle = true;
+     }
 
-	(function loop() {
-		toggle = !toggle;
-		if(toggle) {
-			requestAnimationFrame(loop);
-			return;
-		}
-		noise(ctx);
-		requestAnimationFrame(loop);
-	})();
+     var toggle = true;
 
+     (function loop() {
+          toggle = !toggle;
+          if(toggle) {
+               requestAnimationFrame(loop);
+               return;
+          }
+          noise(ctx);
+          requestAnimationFrame(loop);
+     })();
 
-
-	</script>
-
-
-
-
-
-
-
-
-
-
-
+     </script>
 
 </body>
 </html>
