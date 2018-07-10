@@ -1,0 +1,21 @@
+#hero {
+backgroud-image: url('https://scontent-sjc3-1.cdninstagram.com/vp/6a9f501101244d1aed613cf9f5029297/5BD2B91C/t51.2885-15/e35/36160485_200306254154434_791807835544485888_n.jpg');
+background-size: cover;
+background-position: center center;
+position: relative;
+top: 0;
+bottom: 0;
+height: 100vh;
+z-index: -10;
+}
+
+#hero-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  background-color: rgb(0,0,0,0,5);
+
+}
